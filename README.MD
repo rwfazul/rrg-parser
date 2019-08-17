@@ -1,5 +1,7 @@
 # rrg-parser
 
+A simple parser for right-regular grammars written in Python.
+
 -------------------------------
 
 - Requirements:
@@ -45,13 +47,13 @@
 ```
 -------------------------------
 
-- If the grammar is valid, it will be prompted in execution time a sequence of words (type Ctrl+C or exit() to exit)
+- If the grammar is valid, it will be prompted in execution time a sequence of words (type Ctrl+C or exit() to exit):
 	+ If a word belongs to L(G), a message and the list of productions (derivation) applied during the syntax analysis will be printed;
-	+ Otherwise, the parser will show the cause and position of the error (lexical or syntax) 
+	+ Otherwise, the parser will show the cause and position of the error (lexical or syntax).
 
 -------------------------------
 
-- Demo (generator of regular expressions):
+- Demo (generator of regular expressions through right-regular grammar):
 ```bash
 	$ pip install greenery
 	$ python3 regex.py grammar.txt
