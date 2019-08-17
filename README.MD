@@ -13,14 +13,16 @@
 		- list of non-terminal symbols ("N"), e.g. "N": ["A", "B"]
 		- list of terminal symbols ("T"), e.g. "T": ["a", "b, "c"]
 		- nested JSON object for the production rules ("P"), where which productions is defined as:
-			a) <non-terminal>: [<terminal><non-terminal>, ...], e.g. "A": ["aA", "bB"]
-			b) <terminal>: [<terminal>...<terminal><non-terminal>, ...], e.g. "A": ["abaA", "bB"]
-			c) <non-terminal>: [<terminal>, ... ], e.g. "A": ["aA", "a"]
-			d) <non-terminal>: [<terminal>...<terminal>, ... ], e.g. "A": ["aA", "bbb"]
-			e) <non-terminal>: [empty (" "), ...], e.g. "A": [bB, " "]
+			- <non-terminal>: [<terminal><non-terminal>, ...], e.g. "A": ["aA", "bB"]
+			- <terminal>: [<terminal>...<terminal><non-terminal>, ...], e.g. "A": ["abaA", "bB"]
+			- <non-terminal>: [<terminal>, ... ], e.g. "A": ["aA", "a"]
+			- <non-terminal>: [<terminal>...<terminal>, ... ], e.g. "A": ["aA", "bbb"]
+			- <non-terminal>: [empty (" "), ...], e.g. "A": [bB, " "]
 		- start symbol in the grammar (S), e.g. "S" : "B"
 		
 	+ Example: 'grammar.txt'
+	
+	```json
 		{
 			"N": ["S","A"],
 			"T": ["a", "b", "c"],
@@ -30,12 +32,14 @@
 			},
 			"S": "S"
 		}
-
+	```
 -------------------------------
 
 - Running:
-	+ $ python3 main.py grammar.txt
 
+```bash
+	+ $ python3 main.py grammar.txt
+```
 -------------------------------
 
 - If the grammar is valid, it will be prompted in execution time a sequence of words (type Ctrl+C or exit() to exit)
@@ -45,7 +49,8 @@
 -------------------------------
 
 - Demo (generator of regular expressions):
+```bash
 	+ $ pip install greenery
 	+ $ python3 regex.py grammar.txt
-
+```
 -------------------------------
