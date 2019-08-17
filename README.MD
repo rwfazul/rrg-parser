@@ -13,11 +13,14 @@
 		- list of non-terminal symbols ("N"), e.g. "N": ["A", "B"]
 		- list of terminal symbols ("T"), e.g. "T": ["a", "b, "c"]
 		- nested JSON object for the production rules ("P"), where which productions is defined as:
+		
+		```
 			- <non-terminal>: [<terminal><non-terminal>, ...], e.g. "A": ["aA", "bB"]
 			- <terminal>: [<terminal>...<terminal><non-terminal>, ...], e.g. "A": ["abaA", "bB"]
 			- <non-terminal>: [<terminal>, ... ], e.g. "A": ["aA", "a"]
 			- <non-terminal>: [<terminal>...<terminal>, ... ], e.g. "A": ["aA", "bbb"]
 			- <non-terminal>: [empty (" "), ...], e.g. "A": [bB, " "]
+		```
 		- start symbol in the grammar (S), e.g. "S" : "B"
 		
 	+ Example: 'grammar.txt'
@@ -38,7 +41,7 @@
 - Running:
 
 ```bash
-	+ $ python3 main.py grammar.txt
+	$ python3 main.py grammar.txt
 ```
 -------------------------------
 
@@ -50,7 +53,7 @@
 
 - Demo (generator of regular expressions):
 ```bash
-	+ $ pip install greenery
-	+ $ python3 regex.py grammar.txt
+	$ pip install greenery
+	$ python3 regex.py grammar.txt
 ```
 -------------------------------
